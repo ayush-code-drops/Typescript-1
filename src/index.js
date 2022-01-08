@@ -1,14 +1,14 @@
 var a = 5;
 a = 7;
 console.log(a);
-let x;
+var x;
 x = true;
-let list = [1, 2, 3];
+var list = [1, 2, 3];
 list.push(4);
 //another way of declaring a type
-let arr;
+var arr;
 arr = [1, 2, 3];
-let tuple;
+var tuple;
 tuple = ["Indirapuri", 83];
 //tuple has fixed length;
 //Enums
@@ -20,27 +20,28 @@ var Color;
     Color[Color["green"] = 1] = "green";
     Color[Color["blue"] = 2] = "blue";
 })(Color || (Color = {}));
-let same = Color;
+var same = Color;
 console.log(same);
 //function return statement can be given a particular response
 //void type is used when you don't want to return anything
 function sum(a, b) {
     console.log(a + b);
 }
-let obj;
+var obj;
 obj = { label: "button", color: "red", size: 4, optional: "optional and could skip" };
 //annoymous/arrow func
-let add = (a, b) => {
+var add = function (a, b) {
     return a + b;
 };
-function getName({ lastname, firstname }) {
+function printName(_a) {
+    var lastname = _a.lastname, firstname = _a.firstname;
     if (lastname)
         return lastname + "" + firstname;
     return firstname;
 }
-let ans = getName({ firstname: "ayush" });
+var ans = printName({ firstname: "ayush" });
 console.log(ans);
 //Union type
 //for giving multiple types to a value
-let value;
-let val;
+var value;
+var val;

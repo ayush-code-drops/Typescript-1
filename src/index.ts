@@ -30,6 +30,10 @@ enum Color{
     blue 
 }
 
+let same = Color
+console.log(same)
+
+
 //function return statement can be given a particular response
 
 //void type is used when you don't want to return anything
@@ -57,19 +61,34 @@ obj = { label: "button", color: "red", size: 4,optional:"optional and could skip
 let add = (a: number, b: number) :number => {
     return a + b;
 }
+
+
+
+//getName Function 
 interface Person{
     firstname: string;
     lastname?:string
   }
-function printName({ lastname, firstname }: Person):string{
+function getName({ lastname, firstname }: Person):string{
     if (lastname) return lastname + "" + firstname;
 
     return firstname
 }
 
-let ans = printName({ firstname: "ayush" })
+
+
+let ans = getName({ firstname: "ayush" })
 console.log(ans);
 
+//Interface Address
+interface Address{
+    houseNo: number;
+    street: string;
+    city: string;
+    pin: number;
+    state: string;
+    country: string;
+}
 //Union type
 //for giving multiple types to a value
 let value: number | string | null;
